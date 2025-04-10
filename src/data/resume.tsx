@@ -111,7 +111,7 @@ export const DATA = {
       start: "Jan 2020",
       end: "Jan 2023",
       description:
-        "As a freelance react developer and UX designer, I worked on various projects for clients across the globe. I primarily worked on designing and developing web applications. I mostly utilized pre-built UI libraries like Material UI, Tailwind CSS and Shadcn UI. For prototyping, I used Figma and Adobe XD. \n [See profile ](https://www.freelancer.in/hireme/yash140498) &nbsp; ⭐⭐⭐⭐⭐",
+        "As a freelance react developer and UX designer, I worked on various projects for clients across the globe. I primarily worked on designing and developing web applications. I mostly utilized pre-built UI libraries like Material UI, Tailwind CSS and Shadcn UI. For prototyping, I used Figma and Adobe XD. \n [See profile ](https://www.freelancer.in/u/yash140498) &nbsp; ⭐⭐⭐⭐⭐",
     },
   ],
   projects: [
