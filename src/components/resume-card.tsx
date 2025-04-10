@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Markdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -34,25 +36,16 @@ export const ResumeCard = ({
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
-      e.preventDefault();
       setIsExpanded(!isExpanded);
     }
   };
 
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
+    <span className="block cursor-pointer" onClick={handleClick}>
       <Card className="flex">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className="object-cover"
-            />
+            <AvatarImage src={logoUrl} alt={altText} className="object-cover" />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
@@ -81,7 +74,11 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className={cn(`text-xs tabular-nums text-black dark:text-white text-right ${bricolage_grotesque}`)}>
+              <div
+                className={cn(
+                  `text-xs tabular-nums text-black dark:text-white text-right ${bricolage_grotesque}`
+                )}
+              >
                 {period}
               </div>
             </div>
@@ -101,11 +98,16 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm  font-light"
             >
-              {description}
+              <Markdown
+                className="prose max-w-full text-pretty font-sans text-sm text-black dark:prose-invert dark:text-white !font-light"
+                remarkPlugins={[remarkBreaks]}
+              >
+                {description}
+              </Markdown>
             </motion.div>
           )}
         </div>
       </Card>
-    </Link>
+    </span>
   );
 };
