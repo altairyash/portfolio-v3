@@ -1,3 +1,4 @@
+import AskAI from "@/components/ask-ai";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -46,6 +47,8 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
+          
+        <AskAI />
         </div>
         
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
