@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Full Stack Developer. I love building things and helping people. Very active on Twitter.",
   summary:
-    "I'm a fullstack developer with 4+ years of experience in building scalable web apps, AI automations and Agentic workflows. With passion for fast webapps and high work ethics, I like to build things that matter. \n \n Let's connect for your next idea or \n just drop me a Hey! on X, I'm pretty active there.",
+    "📍Based in India \n \n I'm a fullstack developer with 4+ years of experience in building scalable fast web apps, fine-tuned AI automations and Agentic workflows. \n \n For quick connect just drop me a Hey! on X, I'm pretty active there.",
   avatarUrl: "/me.png",
   skills: [
     "React",
@@ -191,8 +191,5 @@ export const DATA = {
       ],
       logo: "/pluggit.png",
     },
-  ],
-  hackathons: [
-    // Hackathon data remains unchanged
   ],
 } as const;

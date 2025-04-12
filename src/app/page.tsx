@@ -1,5 +1,4 @@
 import AskAI from "@/components/ask-ai";
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
@@ -13,7 +12,7 @@ import { cn } from "@/lib/utils";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import remarkBreaks from 'remark-breaks';
+import remarkBreaks from "remark-breaks";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -21,7 +20,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="mx-auto w-full max-w-2xl space-y-3">
           <div className="gap-2 flex justify-between pt-8">
             <div className="items-left flex flex-col flex-1 space-y-1.5">
               <BlurFadeText
@@ -34,7 +33,10 @@ export default function Page() {
               />
               <div>
                 <BlurFade delay={BLUR_FADE_DELAY * 4}>
-                  <Markdown className="prose max-w-full text-pretty font-sans text-sm text-black dark:prose-invert dark:text-white !font-light" remarkPlugins={[remarkBreaks]}>
+                  <Markdown
+                    className="prose max-w-full text-pretty font-sans text-sm text-black dark:prose-invert dark:text-white !font-light"
+                    remarkPlugins={[remarkBreaks]}
+                  >
                     {DATA.summary}
                   </Markdown>
                 </BlurFade>
@@ -47,21 +49,24 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
-          
-        <AskAI />
+
+          <BlurFade delay={BLUR_FADE_DELAY*4}>
+            <AskAI />
+          </BlurFade>
         </div>
-        
+
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className="mt-8 flex gap-4">
             <Link href={"https://calendly.com/yash140498/30min"}>
-            <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
-               Discuss Your Project <ArrowTopRightIcon className="font-bold ml-2"/>
-            </RainbowButton>
+              <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
+                Discuss Your Project{" "}
+                <ArrowTopRightIcon className="font-bold ml-2" />
+              </RainbowButton>
             </Link>
             <Link href="#contact">
-            <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
-              Hire
-            </RainbowButton>
+              <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
+                Hire
+              </RainbowButton>
             </Link>
           </div>
         </BlurFade>
@@ -112,9 +117,9 @@ export default function Page() {
                   Check out my latest work
                 </h2>
                 <p className="prose max-w-full text-pretty font-sans text-sm text-black dark:prose-invert dark:text-white !font-light">
-                  Recently I have been working on genAI tools and
-                  applications. I am also interested in building
-                  applications that help people in their daily lives.
+                  Recently I have been working on genAI tools and applications.
+                  I am also interested in building applications that help people
+                  in their daily lives.
                 </p>
               </div>
             </div>
@@ -157,8 +162,8 @@ export default function Page() {
                   className="text-blue-500 hover:underline"
                 >
                   here.
-                </Link>{" "}<br/>
-                I repsond the quickest to mails.
+                </Link>{" "}
+                <br />I repsond the quickest to mails.
               </p>
             </div>
           </BlurFade>

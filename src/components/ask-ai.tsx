@@ -65,54 +65,54 @@ export default function AskAI() {
       {/* Response, Error, or Loading Indicator */}
       {expanded && (response || error) ? (
         response ? (
-          <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400">
+          <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400 italic">
             <Typewriter
               options={{
                 strings: [response],
                 autoStart: true,
                 loop: false,
                 delay: 20,
-                deleteSpeed: 20000,
+                deleteSpeed: 2000000000,
                 cursor: "",
               }}
             />
           </div>
         ) : (
-          <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400">
+          <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400 italic">
             <Typewriter
               options={{
                 strings: [error],
                 autoStart: true,
                 loop: false,
                 delay: 20,
-                deleteSpeed: 20000,
+                deleteSpeed: 2000000000,
                 cursor: "",
               }}
             />
           </div>
         )
       ) : expanded && isLoading ? (
-        <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400">
+        <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400 italic">
           <Typewriter
             options={{
               strings: ["thinking . . ."],
               autoStart: true,
               loop: false,
               delay: 20,
-              deleteSpeed: 20000,
+              deleteSpeed: 2000000000,
               cursor: "",
             }}
           />
         </div>
       ) : (
-        <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400">
+        <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400 italic">
           <Typewriter
             options={{
               strings: ["Use AI assistant"],
               autoStart: true,
               loop: false,
               delay: 20,
-              deleteSpeed: 20000,
+              deleteSpeed: 2000000000,
               cursor: "",
             }}
           />
