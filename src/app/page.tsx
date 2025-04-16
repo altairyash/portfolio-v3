@@ -11,7 +11,6 @@ import { DATA } from "@/data/resume";
 import { bricolage_grotesque } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
-import { CopyIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
@@ -52,7 +51,7 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-        <div className="flex flex-row justify-between gap-4 w-full items-center">
+        <div className="flex flex-col md:flex-row justify-between gap-4 items-start w-full md:items-center">
           <div className="flex flex-col">
             <BlurFade delay={BLUR_FADE_DELAY * 4}>
               <div className="mt-8 flex gap-4">
