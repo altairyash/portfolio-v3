@@ -81,12 +81,12 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div className="w-full">
+      <div className="w-full !my-4">
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <AskAI />
         </BlurFade>
       </div>
-      <section id="work">
+      <section id="work" className="!mt-2">
         <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
