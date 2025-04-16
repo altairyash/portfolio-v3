@@ -61,9 +61,10 @@ export default function AskAI() {
   }, [expanded]);
 
   return (
-    <div className="relative w-fit gap-x-3 items-left flex flex-col">
-      {/* Response, Error, or Loading Indicator */}
-      {expanded && (response || error) ? (
+    <div className="relative w-fit my-2 gap-x-3 items-left flex flex-col">
+
+            {/* Response, Error, or Loading Indicator */}
+            {expanded && (response || error) ? (
         response ? (
           <div className="text-xs py-2 rounded-md max-w-xs text-gray-800 dark:text-gray-400 italic">
             <Typewriter

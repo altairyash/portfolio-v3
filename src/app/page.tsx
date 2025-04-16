@@ -1,4 +1,5 @@
 import AskAI from "@/components/ask-ai";
+import CopyButton from "@/components/copy";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
@@ -10,6 +11,7 @@ import { DATA } from "@/data/resume";
 import { bricolage_grotesque } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { CopyIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
@@ -20,7 +22,7 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-3">
+        <div className="mx-auto w-full max-w-2xl space-y-5">
           <div className="gap-2 flex justify-between pt-8">
             <div className="items-left flex flex-col flex-1 space-y-1.5">
               <BlurFadeText
@@ -49,28 +51,42 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
-
-          <BlurFade delay={BLUR_FADE_DELAY*4}>
-            <AskAI />
-          </BlurFade>
         </div>
-
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <div className="mt-8 flex gap-4">
-            <Link href={"https://calendly.com/yash140498/30min"}>
-              <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
-                Discuss Your Project{" "}
-                <ArrowTopRightIcon className="font-bold ml-2" />
-              </RainbowButton>
-            </Link>
-            <Link href="#contact">
-              <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
-                Hire
-              </RainbowButton>
-            </Link>
+        <div className="flex flex-row justify-between gap-4 w-full items-center">
+          <div className="flex flex-col">
+            <BlurFade delay={BLUR_FADE_DELAY * 4}>
+              <div className="mt-8 flex gap-4">
+                <Link href={"https://calendly.com/yash140498/30min"}>
+                  <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
+                    Discuss Your Project{" "}
+                    <ArrowTopRightIcon className="font-bold ml-2" />
+                  </RainbowButton>
+                </Link>
+                <Link href="#contact">
+                  <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
+                    Hire ▾
+                  </RainbowButton>
+                </Link>
+              </div>
+            </BlurFade>
           </div>
-        </BlurFade>
+          <div className="flex flex-col items-end">
+            <BlurFade delay={BLUR_FADE_DELAY * 2}>
+              <span className="flex mt-4 gap-x-4 max-w-full text-pretty font-sans text-xs text-gray-800 dark:text-gray-200 italic items-center underline underline-offset-2">
+                <Link href={DATA.contact.social.email.url}>
+                  {DATA.contact.email}
+                </Link>
+                <CopyButton text={DATA.contact.email} />
+              </span>
+            </BlurFade>
+          </div>
+        </div>
       </section>
+      <div className="w-full">
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <AskAI />
+        </BlurFade>
+      </div>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-5">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
