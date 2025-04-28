@@ -54,7 +54,7 @@ export default function Page() {
         <div className="flex flex-col md:flex-row justify-between gap-4 items-start w-full md:items-center">
           <div className="flex flex-col">
             <BlurFade delay={BLUR_FADE_DELAY * 4}>
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex flex-col md:flex-row gap-4">
                 <Link href={"https://calendly.com/yashyadav14/30min"}>
                   <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
                     Discuss Your Project{" "}
