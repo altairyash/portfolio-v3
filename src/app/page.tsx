@@ -63,7 +63,7 @@ export default function Page() {
                 </Link>
                 <Link href="#contact">
                   <RainbowButton className="h-10 max-sm:h-10 text-sm px-5 max-sm:px-5 py-1 max-sm:py-0">
-                    Hire ▾
+                    Open to work 🟢 | Hire ▾ 
                   </RainbowButton>
                 </Link>
               </div>
